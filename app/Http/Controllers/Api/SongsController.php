@@ -28,10 +28,11 @@ class SongsController extends Controller
         });
         $lyric = str_replace("\n", "||", $lyric);
         $lyric = str_replace("<br>\r", "", $lyric);
-        $lyric = str_replace("</div>", "", $lyric);
+        $lyric = str_replace("</div>", "||", $lyric);
         $lyric = str_replace("<div class=\"vietsub1 sub_line\">", "", $lyric);
-        $lyric = str_replace('"', "", $lyric);
+       // $lyric = str_replace('"', "", $lyric);
         $lyric = str_replace("  ", "", $lyric);
+        $lyric = str_replace("<br>", "", $lyric);
         $arr = explode("||", $lyric[0]);
         return response()->json([
             'success' => true,

@@ -19,7 +19,7 @@ class AlbumsController extends Controller
         $albums = $crawler->filter('.d-table .card-footer')->each(
             function (Crawler $node) {
                 $item_title = $node->filter('.name > a')->text();
-                $item_artist = $node->filter('.author-ellepsis > a')->text();
+                $item_artist = $node->filter('.author-ellepsis')->text();
                 $item_href = $node->filter('.tool > ul > li > a')->attr('href');
                 $client2 = new Client();
                 $crawler2 = $client2->request('GET',$item_href);

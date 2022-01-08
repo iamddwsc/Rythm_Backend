@@ -36,6 +36,7 @@ Route::post('lyric', 'Api\SongsController@getLyric');
 Route::post('chart', 'Api\ChartController@getChart');
 //Search
 Route::post('search', 'Api\SearchController@getSearch');
+Route::post('search-by-song', 'Api\SearchController@getSearchSong');
 
 // chiasenhac tree
 Route::get('/test', [TreeChiasenhac::class, 'test']);
