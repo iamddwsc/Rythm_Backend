@@ -22,12 +22,12 @@ Route::get('logout', 'Api\AuthController@logout');
 
 //Home
 Route::get('slider', 'Api\HomeController@getSlider');
-Route::get('new-album-2020-vn', 'Api\HomeController@getNewAlbum2020_vn');
-Route::get('new-album-2020-usuk', 'Api\HomeController@getNewAlbum2020_usuk');
-Route::get('new-album-2020-kr', 'Api\HomeController@getNewAlbum2020_kr');
-Route::get('new-album-2020-cn', 'Api\HomeController@getNewAlbum2020_cn');
-Route::get('new-album-2020-jp', 'Api\HomeController@getNewAlbum2020_jp');
-Route::get('new-album-2020-other', 'Api\HomeController@getNewAlbum2020_other');
+Route::get('new-album-vn', 'Api\HomeController@getNewAlbum2020_vn');
+Route::get('new-album-usuk', 'Api\HomeController@getNewAlbum2020_usuk');
+Route::get('new-album-kr', 'Api\HomeController@getNewAlbum2020_kr');
+Route::get('new-album-cn', 'Api\HomeController@getNewAlbum2020_cn');
+Route::get('new-album-jp', 'Api\HomeController@getNewAlbum2020_jp');
+Route::get('new-album-other', 'Api\HomeController@getNewAlbum2020_other');
 
 //Song & play
 Route::post('album', 'Api\AlbumsController@getAlbum');

@@ -10,8 +10,6 @@ use Symfony\Component\DomCrawler\Crawler;
 class AlbumsController extends Controller
 {
     public function getAlbum(Request $request) {
-        //$url = 'https://chiasenhac.vn/nghe-album/the-baddest-single-xss73mszqtw841.html#_=_';
-        #$url = 'https://chiasenhac.vn/nghe-album/anh-mai-la-duy-nhat-single-xss6dwvzqkm921.html';
         $url = $request->url_info;
         $client = new Client();
         $crawler = $client->request('GET', $url);
@@ -45,7 +43,6 @@ class AlbumsController extends Controller
                             $song_singer = $node->filter('.list-unstyled > li')->eq(0)->filter('a');
                             $z = array();
                             for ($i = 0; $i < $song_singer_count; $i++) {
-                                //$data[$i] = $song_singer->eq($i)->text();
                                 array_push($z, $song_singer->eq($i)->text());
                             }
                             $z = implode(', ', $z);
